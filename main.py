@@ -1,52 +1,27 @@
-# Check if two words are anagrams 
+# Read text from a file, and count the occurence of words in that text
 # Example:
-# find_anagrams("hello", "check") --> False
-# find_anagrams("below", "elbow") --> True
+# count_words("The cake is done. It is a big cake!") 
+# --> {"cake":2, "big":1, "is":2, "the":1, "a":1, "it":1}
 
-
-from operator import truediv
-from turtle import position
-from xml.etree.ElementPath import find
-from xmlrpc.client import FastUnmarshaller
-
-
-# def find_anagram(word, anagram):
-
-
-    
-    # [assignment] Add your code here
-
-    # return True
+from importlib.resources import contents
+from itertools import count
 
 
 
-def find_anagram(ward,draw):
-
-#sorting strings to check whether both are matches
-
-    if(sorted(string1)== sorted(string2)):   
-        print("True")
-    else:
-        print("False")
-
-string1 = "ward"    #variable
-string2 = "draw"
-print("string value1 : ", string1 )
-print("string value2 : ", string2 )
-find_anagram(string1, string2)   #returns true if they are anagrams
 
 
-def find_anagram(water,draw):
+    with open('story.txt') as f:
+        read_file_contents = f.read()  #to return a string
+        print(read_file_contents) #read all the lines in a text 
+        count_words = read_file_contents.count("a")
+        print(count_words) #counting the number of 'a'
+        count_words = read_file_contents.count("glass")
+        print(count_words) #counting the number of 'glass'
 
-#sorting strings to check whether both are matches
+ #creating a dictionary       
+dictionary = {'a': '29' , 'glass': '4'}
+for key, value in dictionary.items():
+    print(f"{key}: {value}") #printing the key and value
 
-    if(sorted(string1)== sorted(string2)):   
-        print("True")
-    else:
-        print("False")
 
-string1 = "water"    #variable
-string2 = "draw"
-print("string value1 : ", string1 ) #prints the string and assigned value
-print("string value2 : ", string2 )
-find_anagram(string1, string2)   #returns false if they are not anagrams
+ 
